@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Hasil Prediksi
+    </title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{url_for('static', filename='images/logo.png')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .back-to-home {
+        border: 4px solid #222;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.06);
+        color: #222;
+        display: block;
+        max-width: 14.5rem;
+        padding: 0.5rem 0.8rem;
+        margin-bottom: 3.5rem;
+        text-decoration: none;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+      }
+
+      .back-to-home:hover {
+        background-color: #222;
+        color: #eee;
+      }
+
+      .back-to-home svg {
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/" class="back-to-home"
+        ><svg
+          id="i-arrow-left"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          width="32"
+          height="32"
+          fill="none"
+          stroke="currentcolor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+        >
+          <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
+        </svg>
+        Kembali ke beranda</a
+      >
+      <h1>{{ prediction }}</h1>
+      Jumlah curah hujan sebesar {{ result }} mm.
+    </div>
+  </body>
+</html>

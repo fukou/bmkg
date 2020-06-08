@@ -1,0 +1,38 @@
+{% extends "template.html" %} {% block content %}
+<div class="about">
+  <h1>Tentang kami</h1>
+  Aplikasi website ini dibuat untuk memprediksi banjir dengan memperhatikan
+  tingkat curah hujan. Berikut indikator jumlah curah hujan.
+  <div class="grid__p">
+    <div class="grid__p--content">
+      <h2>Rendah</h2>
+      <ul>
+        <li>0 – 20 mm</li>
+        <li>21 – 50 mm</li>
+        <li>51 – 100 mm</li>
+      </ul>
+    </div>
+    <div class="grid__p--content">
+      <h2>Menengah</h2>
+      <ul>
+        <li>101 mm – 150 mm</li>
+        <li>150 mm – 200 mm</li>
+        <li>201 mm – 300 mm</li>
+      </ul>
+    </div>
+    <div class="grid__p--content">
+      <h2>Tinggi</h2>
+      <ul>
+        <li>301 mm – 400 mm</li>
+        <li>401 mm – 500 mm</li>
+      </ul>
+    </div>
+    <div class="grid__p--content">
+      <h2>Sangat Tinggi</h2>
+      <ul>
+        <li>Lebih dari 500 mm</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

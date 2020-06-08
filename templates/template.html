@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aplikasi Prediksi Kejadian Banjir BMKG Cilacap</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{url_for('static', filename='images/logo.png')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a id="index" href="{{ url_for('index') }}">Beranda</a></li>
+        <li><a id="tentang" href="{{ url_for('tentang') }}">Tentang</a></li>
+        <li>
+          <a id="tentang" href="{{ url_for('grafik') }}"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 20v-6M6 20V10M18 20V4" />
+            </svg>
+            Grafik</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://www.bmkg.go.id/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5M15 3h6v6M10 14L20.2 3.8"
+                />
+              </g>
+            </svg>
+            Website utama
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+
+    <div class="blob">
+      <svg
+        width="900"
+        height="900"
+        viewBox="0 0 600 600"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g transform="translate(300,300)">
+          <path
+            d="M105.9,-139.7C148.7,-114.6,202.7,-99,218,-67.2C233.3,-35.4,209.9,12.6,180.3,44.7C150.7,76.8,115,93,84,120.4C52.9,147.8,26.5,186.4,-6.4,195.2C-39.2,203.9,-78.4,182.9,-107.4,154.8C-136.4,126.7,-155.2,91.6,-158.6,57.2C-162,22.8,-149.9,-11,-143.1,-50.9C-136.2,-90.8,-134.5,-136.8,-111.5,-168.4C-88.6,-199.9,-44.3,-216.9,-6.4,-208.2C31.5,-199.4,63.1,-164.8,105.9,-139.7Z"
+          />
+        </g>
+      </svg>
+    </div>
+
+    <script>
+      document.querySelector("#{{request.endpoint}}").classList.add("active");
+    </script>
+  </body>
+</html>
